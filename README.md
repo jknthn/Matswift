@@ -22,7 +22,7 @@ pod 'Matswift'
 
 ## Author
 
-jknthn, jeremi@tooploox.com
+jknthn, jeremi.kaczmarczyk@gmail.com
 
 ## License
 
