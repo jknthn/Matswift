@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.3'
 
-  s.source_files = 'Matswift/Classes/**/*'
+  s.source_files = 'Matswift/Classes/*'
   
   # s.resource_bundles = {
   #   'Matswift' => ['Matswift/Assets/*.png']
