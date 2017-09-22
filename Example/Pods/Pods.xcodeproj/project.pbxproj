@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CB6FF31DF2A00369FF10E57013612EC /* Pods-Matswift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D800C8891339A528FA2C6A609B8A2D /* Pods-Matswift_Tests-dummy.m */; };
+		5AA4F85610910859C4F162E0552AE8FB /* Pods-Matswift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD70C2684FEB5EFF938FF5F9018CEFA /* Pods-Matswift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62341FA9EC361D9A133F046BD7797BC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9AF34430828F691A9E475D2FEEE3C3CC /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DAC62D6B19544EDF903C8114D4238 /* Matrix.swift */; };
+		AD5281B04149A0600F4286BED1422758 /* Matswift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE89EB1570B843B4497117F81EA0D6 /* Matswift-dummy.m */; };
+		B2EB97C487EB1BA65AB02FC3A93A7DBC /* Matswift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D46E0E269FBA9E09D664EF4EE7148C9B /* Matswift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D586A1FE6068467F73E668A686BC6BC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D7C4DE9E7E579C97ECDFE5F4E932C6C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E1A07C20983A1EA9D1030831B2899DAF /* Pods-Matswift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AB9A923B43E9914B7BE964E0DDB1BF6 /* Pods-Matswift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9AE36B5ABF071A4C942B8BF817EE475 /* Pods-Matswift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B54F154703EC5B907B151A0559ECDC4D /* Pods-Matswift_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A507F0670CAEA04B1B5ADC048BB3410E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6993CB2933355701E3E1F1ACF1977A88;
+			remoteInfo = Matswift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1512B499AE465F58D56A6DEA4B5F6B0E /* Pods-Matswift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Matswift_Tests.modulemap"; sourceTree = "<group>"; };
+		25CE029830B165EF135794ADEF474CED /* Matswift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matswift-prefix.pch"; sourceTree = "<group>"; };
+		26D834F02D75559EF9D7905470660F9A /* Pods-Matswift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Matswift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		28D41FAE1E0A67D1968AFFDA68C10142 /* Pods-Matswift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matswift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2AB9A923B43E9914B7BE964E0DDB1BF6 /* Pods-Matswift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Matswift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3A657F51349514AC54C7A7FA79751642 /* Pods-Matswift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Matswift_Example-resources.sh"; sourceTree = "<group>"; };
+		3C45CD3EFD3FEE66326CDE30D1437735 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5757AADEE1869D40F18503BCD1028D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40935CD99B1CFB87D4BADA3E878AAAA6 /* Pods-Matswift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matswift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B0D76BCE6738BA229807E83E4B80FFD /* Pods-Matswift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Matswift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		534627530700EFEA329712B007DF2240 /* Pods-Matswift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matswift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5351890373D1F8A8EB1B72A283AE378F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5516387C105CFE95ECA078360428D675 /* Pods-Matswift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Matswift_Example.modulemap"; sourceTree = "<group>"; };
+		63FEF4F929489E8F014AB7E4D7B78438 /* Pods-Matswift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Matswift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6CD70C2684FEB5EFF938FF5F9018CEFA /* Pods-Matswift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Matswift_Example-umbrella.h"; sourceTree = "<group>"; };
+		7C6C58E1C8F723F5BF592D846142349B /* Pods-Matswift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matswift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		91A089C4601E7834242D2991A76296EE /* Pods-Matswift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Matswift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7D800C8891339A528FA2C6A609B8A2D /* Pods-Matswift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Matswift_Tests-dummy.m"; sourceTree = "<group>"; };
+		A9A9C91592E7E97CA9439F7FC5FE1752 /* Pods-Matswift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Matswift_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AA43B33B2A98AB6B01B66CF01C23BCE2 /* Matswift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Matswift.modulemap; sourceTree = "<group>"; };
+		B3B6BD5250179563E2739034DF0A7CB5 /* Matswift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Matswift.xcconfig; sourceTree = "<group>"; };
+		B54F154703EC5B907B151A0559ECDC4D /* Pods-Matswift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Matswift_Example-dummy.m"; sourceTree = "<group>"; };
+		C40DAC62D6B19544EDF903C8114D4238 /* Matrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		D22FF355384CFFDFB6F701B44952B9FE /* Pods-Matswift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Matswift_Tests-resources.sh"; sourceTree = "<group>"; };
+		D46E0E269FBA9E09D664EF4EE7148C9B /* Matswift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matswift-umbrella.h"; sourceTree = "<group>"; };
+		D7BE89EB1570B843B4497117F81EA0D6 /* Matswift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Matswift-dummy.m"; sourceTree = "<group>"; };
+		DD0BB7A545A231244D92408A4889D7F0 /* Pods_Matswift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matswift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1537C4D2144D8F2EDD8276BCE27B887 /* Matswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Matswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D96F078F73B0E45DD2FFD1F8C2F2C5 /* Pods-Matswift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Matswift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F7D3C03826922A99007B1AD6B503752D /* Pods_Matswift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matswift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E81B95D497783690E76C27FDBB1D1B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62341FA9EC361D9A133F046BD7797BC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CA5972B03948E9267991F93BCD251A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C4DE9E7E579C97ECDFE5F4E932C6C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9FF723CDF7FB5DDFAE4C2CE919D30DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D586A1FE6068467F73E668A686BC6BC3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C0FCC844A61410C5872443F76878733 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1537C4D2144D8F2EDD8276BCE27B887 /* Matswift.framework */,
+				F7D3C03826922A99007B1AD6B503752D /* Pods_Matswift_Example.framework */,
+				DD0BB7A545A231244D92408A4889D7F0 /* Pods_Matswift_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FD0992E297F8A6238573700AB28DD74 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CD06A0AE50AD344731D9E462AA8BFA /* Pods-Matswift_Example */,
+				A2709B5EC9124F18BBA5051D9E8D6188 /* Pods-Matswift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5596CBA50F3FE2921DC4517BE996BF17 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C40DAC62D6B19544EDF903C8114D4238 /* Matrix.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6C8AF56AE8EECDF711BCD024E8F77090 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D5757AADEE1869D40F18503BCD1028D /* Info.plist */,
+				AA43B33B2A98AB6B01B66CF01C23BCE2 /* Matswift.modulemap */,
+				B3B6BD5250179563E2739034DF0A7CB5 /* Matswift.xcconfig */,
+				D7BE89EB1570B843B4497117F81EA0D6 /* Matswift-dummy.m */,
+				25CE029830B165EF135794ADEF474CED /* Matswift-prefix.pch */,
+				D46E0E269FBA9E09D664EF4EE7148C9B /* Matswift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Matswift";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F6D75DBCBAD6DFA59624A7024CD3DCB7 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1C0FCC844A61410C5872443F76878733 /* Products */,
+				4FD0992E297F8A6238573700AB28DD74 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		866CD4EDFF977C4C1B841197A14973E8 /* Matswift */ = {
+			isa = PBXGroup;
+			children = (
+				F57261EC699C9CC38D7E88AF7EF8F2CF /* Matswift */,
+				6C8AF56AE8EECDF711BCD024E8F77090 /* Support Files */,
+			);
+			name = Matswift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A2709B5EC9124F18BBA5051D9E8D6188 /* Pods-Matswift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5351890373D1F8A8EB1B72A283AE378F /* Info.plist */,
+				1512B499AE465F58D56A6DEA4B5F6B0E /* Pods-Matswift_Tests.modulemap */,
+				63FEF4F929489E8F014AB7E4D7B78438 /* Pods-Matswift_Tests-acknowledgements.markdown */,
+				26D834F02D75559EF9D7905470660F9A /* Pods-Matswift_Tests-acknowledgements.plist */,
+				A7D800C8891339A528FA2C6A609B8A2D /* Pods-Matswift_Tests-dummy.m */,
+				A9A9C91592E7E97CA9439F7FC5FE1752 /* Pods-Matswift_Tests-frameworks.sh */,
+				D22FF355384CFFDFB6F701B44952B9FE /* Pods-Matswift_Tests-resources.sh */,
+				2AB9A923B43E9914B7BE964E0DDB1BF6 /* Pods-Matswift_Tests-umbrella.h */,
+				40935CD99B1CFB87D4BADA3E878AAAA6 /* Pods-Matswift_Tests.debug.xcconfig */,
+				28D41FAE1E0A67D1968AFFDA68C10142 /* Pods-Matswift_Tests.release.xcconfig */,
+			);
+			name = "Pods-Matswift_Tests";
+			path = "Target Support Files/Pods-Matswift_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5CD06A0AE50AD344731D9E462AA8BFA /* Pods-Matswift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3C45CD3EFD3FEE66326CDE30D1437735 /* Info.plist */,
+				5516387C105CFE95ECA078360428D675 /* Pods-Matswift_Example.modulemap */,
+				91A089C4601E7834242D2991A76296EE /* Pods-Matswift_Example-acknowledgements.markdown */,
+				4B0D76BCE6738BA229807E83E4B80FFD /* Pods-Matswift_Example-acknowledgements.plist */,
+				B54F154703EC5B907B151A0559ECDC4D /* Pods-Matswift_Example-dummy.m */,
+				F5D96F078F73B0E45DD2FFD1F8C2F2C5 /* Pods-Matswift_Example-frameworks.sh */,
+				3A657F51349514AC54C7A7FA79751642 /* Pods-Matswift_Example-resources.sh */,
+				6CD70C2684FEB5EFF938FF5F9018CEFA /* Pods-Matswift_Example-umbrella.h */,
+				534627530700EFEA329712B007DF2240 /* Pods-Matswift_Example.debug.xcconfig */,
+				7C6C58E1C8F723F5BF592D846142349B /* Pods-Matswift_Example.release.xcconfig */,
+			);
+			name = "Pods-Matswift_Example";
+			path = "Target Support Files/Pods-Matswift_Example";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F57261EC699C9CC38D7E88AF7EF8F2CF /* Matswift */ = {
+			isa = PBXGroup;
+			children = (
+				5596CBA50F3FE2921DC4517BE996BF17 /* Classes */,
+			);
+			path = Matswift;
+			sourceTree = "<group>";
+		};
+		F6D75DBCBAD6DFA59624A7024CD3DCB7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				866CD4EDFF977C4C1B841197A14973E8 /* Matswift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		336860703CBA265B63940B70020A5FD1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EB97C487EB1BA65AB02FC3A93A7DBC /* Matswift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC5C7906EE581191D6AE92F36136BC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA4F85610910859C4F162E0552AE8FB /* Pods-Matswift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FF45DCBBB285EDC7E1210ED997BE98 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1A07C20983A1EA9D1030831B2899DAF /* Pods-Matswift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6993CB2933355701E3E1F1ACF1977A88 /* Matswift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E68F27458ACA1C4E794CF461A2B7032 /* Build configuration list for PBXNativeTarget "Matswift" */;
+			buildPhases = (
+				31AB4135D10F24D0B614D8376A270859 /* Sources */,
+				4E81B95D497783690E76C27FDBB1D1B1 /* Frameworks */,
+				336860703CBA265B63940B70020A5FD1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Matswift;
+			productName = Matswift;
+			productReference = F1537C4D2144D8F2EDD8276BCE27B887 /* Matswift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7632E940896F7A06925D8BC12C19272C /* Pods-Matswift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1034C9037580B071CED27AF7F38A54D2 /* Build configuration list for PBXNativeTarget "Pods-Matswift_Example" */;
+			buildPhases = (
+				779ECF8D8042F1DF60A43C24585526F9 /* Sources */,
+				7CA5972B03948E9267991F93BCD251A1 /* Frameworks */,
+				ECC5C7906EE581191D6AE92F36136BC4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				239D25E2A34770F8C2CCF6EF01D46DC3 /* PBXTargetDependency */,
+			);
+			name = "Pods-Matswift_Example";
+			productName = "Pods-Matswift_Example";
+			productReference = F7D3C03826922A99007B1AD6B503752D /* Pods_Matswift_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F2016CEF8B0928CF842C2B4C2EE61DA0 /* Pods-Matswift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A3F4E7C6ED77F9BD22283862FE625BD /* Build configuration list for PBXNativeTarget "Pods-Matswift_Tests" */;
+			buildPhases = (
+				F7A355C5237886D068859A3FE64F815D /* Sources */,
+				E9FF723CDF7FB5DDFAE4C2CE919D30DE /* Frameworks */,
+				F4FF45DCBBB285EDC7E1210ED997BE98 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Matswift_Tests";
+			productName = "Pods-Matswift_Tests";
+			productReference = DD0BB7A545A231244D92408A4889D7F0 /* Pods_Matswift_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1C0FCC844A61410C5872443F76878733 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6993CB2933355701E3E1F1ACF1977A88 /* Matswift */,
+				7632E940896F7A06925D8BC12C19272C /* Pods-Matswift_Example */,
+				F2016CEF8B0928CF842C2B4C2EE61DA0 /* Pods-Matswift_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31AB4135D10F24D0B614D8376A270859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF34430828F691A9E475D2FEEE3C3CC /* Matrix.swift in Sources */,
+				AD5281B04149A0600F4286BED1422758 /* Matswift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779ECF8D8042F1DF60A43C24585526F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AE36B5ABF071A4C942B8BF817EE475 /* Pods-Matswift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A355C5237886D068859A3FE64F815D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB6FF31DF2A00369FF10E57013612EC /* Pods-Matswift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		239D25E2A34770F8C2CCF6EF01D46DC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Matswift;
+			target = 6993CB2933355701E3E1F1ACF1977A88 /* Matswift */;
+			targetProxy = A507F0670CAEA04B1B5ADC048BB3410E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3AC3E0E8CFCAC3559420DBCD281F1AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 534627530700EFEA329712B007DF2240 /* Pods-Matswift_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Matswift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Matswift_Example/Pods-Matswift_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Matswift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CD0C6807B12129778085E2FB838BA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B6BD5250179563E2739034DF0A7CB5 /* Matswift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Matswift/Matswift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Matswift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Matswift/Matswift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Matswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59DDD77F48563A5A7DD750E92CE30DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6C58E1C8F723F5BF592D846142349B /* Pods-Matswift_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Matswift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Matswift_Example/Pods-Matswift_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Matswift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67EB212CCFFBC8C1DF8BE89180E92FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B6BD5250179563E2739034DF0A7CB5 /* Matswift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Matswift/Matswift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Matswift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Matswift/Matswift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Matswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AD8C08927BC21C6694FA9E912AA85F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D41FAE1E0A67D1968AFFDA68C10142 /* Pods-Matswift_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Matswift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Matswift_Tests/Pods-Matswift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Matswift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E8B462700C3078DFC6EBFC29A5743A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40935CD99B1CFB87D4BADA3E878AAAA6 /* Pods-Matswift_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Matswift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Matswift_Tests/Pods-Matswift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Matswift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1034C9037580B071CED27AF7F38A54D2 /* Build configuration list for PBXNativeTarget "Pods-Matswift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AC3E0E8CFCAC3559420DBCD281F1AE2 /* Debug */,
+				59DDD77F48563A5A7DD750E92CE30DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A3F4E7C6ED77F9BD22283862FE625BD /* Build configuration list for PBXNativeTarget "Pods-Matswift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8B462700C3078DFC6EBFC29A5743A0B /* Debug */,
+				8AD8C08927BC21C6694FA9E912AA85F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E68F27458ACA1C4E794CF461A2B7032 /* Build configuration list for PBXNativeTarget "Matswift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67EB212CCFFBC8C1DF8BE89180E92FEB /* Debug */,
+				3CD0C6807B12129778085E2FB838BA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Matswift {
+  umbrella header "Matswift-umbrella.h"
+
+  export *
+  module * { export * }
+}

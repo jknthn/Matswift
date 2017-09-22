@@ -1,0 +1,22 @@
+{
+  "name": "Matswift",
+  "version": "0.1.0",
+  "summary": "A short description of Matswift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jknthn/Matswift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jknthn": "jeremi@tooploox.com"
+  },
+  "source": {
+    "git": "https://github.com/jknthn/Matswift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Matswift/Classes/**/*"
+}

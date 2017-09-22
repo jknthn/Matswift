@@ -1,0 +1,6 @@
+framework module Pods_Matswift_Tests {
+  umbrella header "Pods-Matswift_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

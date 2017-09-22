@@ -1,0 +1,16 @@
+PODS:
+  - Matswift (0.1.0)
+
+DEPENDENCIES:
+  - Matswift (from `../`)
+
+EXTERNAL SOURCES:
+  Matswift:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Matswift: 65230280bad675cbc087a73440559e91597f12e5
+
+PODFILE CHECKSUM: 16181e2444b519acba84c3f05b30a5fa7ee1987d
+
+COCOAPODS: 1.2.1
