@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Matswift_Example' do
+  pod 'Matswift', :path => '../'
+
+  target 'Matswift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
