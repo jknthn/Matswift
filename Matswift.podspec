@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/_jeerr'
 
   s.ios.deployment_target = '10.3'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.12'
 
   s.source_files = 'Matswift/Classes/*'
   
