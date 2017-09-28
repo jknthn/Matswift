@@ -5,11 +5,27 @@
 [![License](https://img.shields.io/cocoapods/l/Matswift.svg?style=flat)](http://cocoapods.org/pods/Matswift)
 [![Platform](https://img.shields.io/cocoapods/p/Matswift.svg?style=flat)](http://cocoapods.org/pods/Matswift)
 
-## Example
+## Description
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Matswift is a matrix computation library. As it is currently based on `Accelerate` framework it works only on iOS and macOS.
+
+## Features
+
+- `Matrix` convienient structure for 2D data
+- Addition operation with `Matrix` and `Double`
+- Subtraction operation with `Matrix` and `Double`
+- Multiplication operation with `Matrix` and `Double`
+- Division operation with `Matrix`
+- `Matrix` dot product
+- `Matrix` sum
+- `Matrix` log
+- `Matrix` invert sign
+- `Matrix` transpose
 
 ## Requirements
+
+- iOS 10.3+ / macOS 10.12+
+- Swift 4.0+
 
 ## Installation
 
@@ -19,6 +35,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Matswift'
 ```
+
+## Roadmap
+
+- More operations
+- Metal support
+- Linux support
 
 ## Author
 

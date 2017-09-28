@@ -22,10 +22,9 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/jknthn/Matswift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jknthn' => 'jeremi.kaczmarczyk@gmail.com' }
-  s.source           = { :git => 'https://github.com/jknthn/Matswift.git', :tag => '0.1.2' }
+  s.source           = { :git => 'https://github.com/jknthn/Matswift.git', :tag => s.version }
   # s.social_media_url = 'https://twitter.com/_jeerr'
 
   s.ios.deployment_target = '10.3'
