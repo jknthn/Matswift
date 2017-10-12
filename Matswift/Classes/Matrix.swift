@@ -3,7 +3,7 @@
 //  Matswift
 //
 //  Created by jknthn on 22/09/2017.
-//  Copyright © 2017 Jeremi Kaczmarczyk. All rights reserved.
+//  Copyright © 2017 Jeremi Kaczmarczyk (jeremi.kaczmarczyk@gmail.com)
 //
 
 import Foundation
@@ -13,29 +13,6 @@ import GameplayKit
 public enum SumDirection {
     case rows
     case columns
-}
-
-public struct Shape: Equatable {
-    
-    public var T: Shape {
-        return Shape(rows: columns, columns: rows)
-    }
-    
-    public var elements: Int {
-        return rows * columns
-    }
-    
-    public let rows: Int
-    public let columns: Int
-    
-    public init(rows: Int, columns: Int) {
-        self.rows = rows
-        self.columns = columns
-    }
-    
-    public static func ==(lhs: Shape, rhs: Shape) -> Bool {
-        return lhs.rows == rhs.rows && lhs.columns == rhs.columns
-    }
 }
 
 public struct Matrix: Equatable {

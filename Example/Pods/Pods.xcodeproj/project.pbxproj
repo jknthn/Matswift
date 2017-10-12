@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CB6FF31DF2A00369FF10E57013612EC /* Pods-Matswift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D800C8891339A528FA2C6A609B8A2D /* Pods-Matswift_Tests-dummy.m */; };
+		1F4424201F8F48A400163FD6 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44241F1F8F48A400163FD6 /* Shape.swift */; };
 		5AA4F85610910859C4F162E0552AE8FB /* Pods-Matswift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD70C2684FEB5EFF938FF5F9018CEFA /* Pods-Matswift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62341FA9EC361D9A133F046BD7797BC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9AF34430828F691A9E475D2FEEE3C3CC /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DAC62D6B19544EDF903C8114D4238 /* Matrix.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1512B499AE465F58D56A6DEA4B5F6B0E /* Pods-Matswift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Matswift_Tests.modulemap"; sourceTree = "<group>"; };
+		1F44241F1F8F48A400163FD6 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		25CE029830B165EF135794ADEF474CED /* Matswift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Matswift-prefix.pch"; sourceTree = "<group>"; };
 		26D834F02D75559EF9D7905470660F9A /* Pods-Matswift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Matswift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		28D41FAE1E0A67D1968AFFDA68C10142 /* Pods-Matswift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Matswift_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C40DAC62D6B19544EDF903C8114D4238 /* Matrix.swift */,
+				1F44241F1F8F48A400163FD6 /* Shape.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF34430828F691A9E475D2FEEE3C3CC /* Matrix.swift in Sources */,
+				1F4424201F8F48A400163FD6 /* Shape.swift in Sources */,
 				AD5281B04149A0600F4286BED1422758 /* Matswift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
