@@ -10,13 +10,10 @@ import Foundation
 import Accelerate
 import GameplayKit
 
-public enum SumDirection {
-    case rows
-    case columns
-}
-
-public struct Matrix: Equatable {
+/// Type describing 2-dimensional matrix
+public struct Matrix {
     
+    /// Transpose operation
     public var T: Matrix {
         let newShape = shape.T
         var result = [Double](repeating : 0.0, count : values.count)
@@ -24,118 +21,97 @@ public struct Matrix: Equatable {
         return Matrix(values: result, shape: newShape)
     }
     
+    /// Flat array of `Matrix`s values
     public let values: [Double]
+    
+    /// Shape of the `Matrix`
     public let shape: Shape
     
+    /// Initialization with visual representation of values as array of rows
+    ///
+    /// - parameter values:     Array of rows
     public init(values: [[Double]]) {
         self.values = values.reduce([Double](), +)
         self.shape = Shape(rows: values.count, columns: values[0].count)
     }
     
+    /// Initialization with flat array of values and shape
+    ///
+    /// - parameter values:     Flat array of values
+    /// - parameter shape:      Desired shape
     public init(values: [Double], shape: Shape) {
         precondition(values.count == shape.elements)
         self.values = values
         self.shape = shape
     }
     
-    public init(zeros: Shape) {
-        self.values = [Double](repeating : 0.0, count : zeros.elements)
-        self.shape = zeros
+    /// Function creating `Matrix` of zeroes
+    ///
+    /// - parameter shape:      Desired shape
+    ///
+    /// - returns:              `Matrix` filled with 0.0 values
+    public static func zeros(shape: Shape) -> Matrix {
+        let values = [Double](repeating : 0.0, count : shape.elements)
+        return Matrix(values: values, shape: shape)
     }
     
-    public init(random: Shape, multiplier: Double) {
+    /// Function creating `Matrix` with random, uniform values
+    ///
+    /// - parameter shape:      Desired shape
+    /// - parameter multiplier: Changes default 0.0 - 1.0 range of values
+    ///
+    /// - returns:              `Matrix` filled with random values
+    public static func random(shape: Shape, multiplier: Double = 1.0) -> Matrix {
         var values = [Double]()
         let distribution = GKRandomDistribution(lowestValue: 0, highestValue: 1000)
-        for _ in 0..<random.elements {
+        for _ in 0..<shape.elements {
             values.append(Double(distribution.nextUniform()) * multiplier)
         }
-        self.values = values
-        self.shape = random
+        return Matrix(values: values, shape: shape)
     }
+}
+
+/// `Matrix` - `Double` operators
+extension Matrix {
     
-    private func addScalar(_ scalar: Double) -> Matrix {
-        var sc = scalar
-        var result = [Double](repeating : 0.0, count : values.count)
-        vDSP_vsaddD(values, 1, &sc, &result, 1, vDSP_Length(result.count))
-        return Matrix(values: result, shape: shape)
-    }
-    
-    private func multiplyByScalar(_ scalar: Double) -> Matrix {
-        var sc = scalar
-        var result = [Double](repeating : 0.0, count : values.count)
-        vDSP_vsmulD(values, 1, &sc, &result, 1, vDSP_Length(result.count))
-        return Matrix(values: result, shape: shape)
-    }
-    
-    public func broadcast(to newShape: Shape) -> Matrix? {
-        if newShape.rows == shape.rows && newShape.columns % shape.columns == 0 {
-            var newValues = [Double]()
-            let amount = newShape.columns / shape.columns
-            for v in values {
-                for _ in 0..<amount {
-                    newValues.append(v)
-                }
-            }
-            return Matrix(values: newValues, shape: newShape)
-        } else if newShape.columns == shape.columns && newShape.rows % shape.rows == 0  {
-            var newValues = [Double]()
-            for _ in 0..<(newShape.rows / shape.rows) {
-                newValues += values
-            }
-            return Matrix(values: newValues, shape: newShape)
-        } else {
-            return nil
-        }
-    }
-    
-    private func add(_ matrix: Matrix) -> Matrix {
-        precondition(matrix.shape == shape)
-        var result = [Double](repeating : 0.0, count : values.count)
-        vDSP_vaddD(values, 1, matrix.values, 1, &result, 1, vDSP_Length(values.count))
-        return Matrix(values: result, shape: shape)
-    }
-    
-    private func multiply(by matrix: Matrix) -> Matrix {
-        precondition(matrix.shape == shape)
-        var result = [Double](repeating : 0.0, count : values.count)
-        vDSP_vmulD(values, 1, matrix.values, 1, &result, 1, vDSP_Length(values.count))
-        return Matrix(values: result, shape: shape)
-    }
-    
-    public func sum() -> Double {
-        var result = 0.0
-        vDSP_sveD(values, 1, &result, vDSP_Length(values.count))
-        return result
-    }
-    
-    public static func ==(lhs: Matrix, rhs: Matrix) -> Bool {
-        return lhs.values == rhs.values && lhs.shape == rhs.shape
-    }
-    
+    /// Addition operation. Scalar is added to every element of `Matrix`
     public static func +(lhs: Matrix, rhs: Double) -> Matrix{
         return lhs.addScalar(rhs)
     }
     
+    /// Addition operation. Scalar is added to every element of `Matrix`
     public static func +(lhs: Double, rhs: Matrix) -> Matrix {
         return rhs.addScalar(lhs)
     }
     
+    /// Subtraction operation. Scalar is subtracted from every element of `Matrix`
     public static func -(lhs: Matrix, rhs: Double) -> Matrix{
         return lhs + (-rhs)
     }
     
+    /// Subtraction operation. Scalar is subtracted from every element of `Matrix`
     public static func -(lhs: Double, rhs: Matrix) -> Matrix {
         return lhs + rhs.invertSign()
     }
     
+    /// Multiplication operation. Every element of `Matrix` is multiplied by scalar
     public static func *(lhs: Matrix, rhs: Double) -> Matrix{
         return lhs.multiplyByScalar(rhs)
     }
     
+    /// Multiplication operation. Every element of `Matrix` is multiplied by scalar
     public static func *(lhs: Double, rhs: Matrix) -> Matrix {
         return rhs.multiplyByScalar(lhs)
     }
+}
+
+/// `Matrix` - `Matrix` operators
+extension Matrix {
     
+    /// Addition operation.
+    /// If matrices shaped match corresponding elemens are added
+    /// If either of the matrices can be broadcasted to other shape operation is performed with broadcasted `Matrix`
+    /// Else the operation could not be performed
     public static func +(lhs: Matrix, rhs: Matrix) -> Matrix {
         if lhs.shape == rhs.shape {
             return lhs.add(rhs)
@@ -148,10 +124,18 @@ public struct Matrix: Equatable {
         }
     }
     
+    /// Subtraction operation.
+    /// If matrices shaped match corresponding elemens are subtracted
+    /// If either of the matrices can be broadcasted to other shape operation is performed with broadcasted `Matrix`
+    /// Else the operation could not be performed
     public static func -(lhs: Matrix, rhs: Matrix) -> Matrix {
         return lhs + rhs.invertSign()
     }
     
+    /// Multiplication operation.
+    /// If matrices shaped match corresponding elemens are multiplied
+    /// If either of the matrices can be broadcasted to other shape operation is performed with broadcasted `Matrix`
+    /// Else the operation could not be performed
     public static func *(lhs: Matrix, rhs: Matrix) -> Matrix {
         if lhs.shape == rhs.shape {
             return lhs.multiply(by: rhs)
@@ -164,6 +148,10 @@ public struct Matrix: Equatable {
         }
     }
     
+    /// Division operation.
+    /// If matrices shaped match corresponding elemens are divided
+    /// If either of the matrices can be broadcasted to other shape operation is performed with broadcasted `Matrix`
+    /// Else the operation could not be performed
     public static func /(lhs: Matrix, rhs: Matrix) -> Matrix {
         if lhs.shape == rhs.shape {
             return lhs.divide(by: rhs)
@@ -175,14 +163,17 @@ public struct Matrix: Equatable {
             fatalError("Size error")
         }
     }
+}
+
+
+/// Public functions
+extension Matrix {
     
-    private func divide(by matrix: Matrix) -> Matrix {
-        precondition(matrix.shape == shape)
-        var result = [Double](repeating : 0.0, count : values.count)
-        vDSP_vdivD(matrix.values, 1, values, 1, &result, 1, vDSP_Length(values.count))
-        return Matrix(values: result, shape: shape)
-    }
-    
+    /// Calculate dot product of matrices. `Matrix` calling this function is left side matrix in calculation
+    ///
+    /// - parameter rMatrix:    Right `Matrix` of the equation
+    ///
+    /// - returns:              `Matrix` result of dot product
     public func dot(_ rMatrix: Matrix) -> Matrix {
         precondition(shape.columns == rMatrix.shape.rows)
         let newShape = Shape(rows: shape.rows, columns: rMatrix.shape.columns)
@@ -191,14 +182,33 @@ public struct Matrix: Equatable {
         return Matrix(values: result, shape: newShape)
     }
     
-    public func log() -> Matrix {
-        return Matrix(values: values.map { Darwin.log($0) }, shape: shape)
-    }
-    
+    /// Inverts sign of every element of the `Matrix`
+    ///
+    /// - returns:      `Matrix` with values of opposite sign
     public func invertSign() -> Matrix {
         return Matrix(values: values.map { -$0 }, shape: shape)
     }
     
+    /// Sums every element of `Matrix`
+    ///
+    /// - returns:      `Double` result of summation
+    public func sum() -> Double {
+        var result = 0.0
+        vDSP_sveD(values, 1, &result, vDSP_Length(values.count))
+        return result
+    }
+    
+    /// Enum describing whether summation occurs along columns or rows
+    public enum SumDirection {
+        case rows
+        case columns
+    }
+    
+    /// Sums rows or columns of a `Matrix`
+    ///
+    /// - parameter direction:      Controls if summation occurs along rows or columns
+    ///
+    /// - returns:                  `Matrix` of shape rows x 1 or 1 x columns depending on direction with summed elements
     public func sum(direction: SumDirection) -> Matrix {
         switch direction {
         case .rows:
@@ -223,5 +233,109 @@ public struct Matrix: Equatable {
             return Matrix(values: results, shape: Shape(rows: 1, columns: results.count))
             
         }
+    }
+    
+    /// Logarithm with the base of `e` of every element
+    ///
+    /// - returns:      `Matrix` with computed values
+    public func log() -> Matrix {
+        return Matrix(values: values.map { Darwin.log($0) }, shape: shape)
+    }
+    
+    /// Broadcasting operation inspired by NumPy in python
+    ///
+    /// - parameter shape:      `Shape` off `Matrix` we want to fit into
+    ///
+    /// - returns:              `Matrix` in succeded, nil otherwise
+    public func broadcast(to newShape: Shape) -> Matrix? {
+        if newShape.rows == shape.rows && newShape.columns % shape.columns == 0 {
+            var newValues = [Double]()
+            let amount = newShape.columns / shape.columns
+            for v in values {
+                for _ in 0..<amount {
+                    newValues.append(v)
+                }
+            }
+            return Matrix(values: newValues, shape: newShape)
+        } else if newShape.columns == shape.columns && newShape.rows % shape.rows == 0  {
+            var newValues = [Double]()
+            for _ in 0..<(newShape.rows / shape.rows) {
+                newValues += values
+            }
+            return Matrix(values: newValues, shape: newShape)
+        } else {
+            return nil
+        }
+    }
+}
+
+/// Private functions
+extension Matrix {
+    
+    /// Add scalar to `Matrix`
+    ///
+    /// - parameter scalar:     Value of scalar number
+    ///
+    /// - returns:              `Matrix` with scalar added to every element
+    private func addScalar(_ scalar: Double) -> Matrix {
+        var sc = scalar
+        var result = [Double](repeating : 0.0, count : values.count)
+        vDSP_vsaddD(values, 1, &sc, &result, 1, vDSP_Length(result.count))
+        return Matrix(values: result, shape: shape)
+    }
+    
+    /// Multiply `Matrix` by scalar
+    ///
+    /// - parameter scalar:     Value of scalar number
+    ///
+    /// - returns:              `Matrix` every element multiplied by scalar
+    private func multiplyByScalar(_ scalar: Double) -> Matrix {
+        var sc = scalar
+        var result = [Double](repeating : 0.0, count : values.count)
+        vDSP_vsmulD(values, 1, &sc, &result, 1, vDSP_Length(result.count))
+        return Matrix(values: result, shape: shape)
+    }
+    
+    /// Add `Matrix` to `Matrix`
+    ///
+    /// - parameter matrix:     Other `Matrix`
+    ///
+    /// - returns:              `Matrix`
+    private func add(_ matrix: Matrix) -> Matrix {
+        precondition(matrix.shape == shape)
+        var result = [Double](repeating : 0.0, count : values.count)
+        vDSP_vaddD(values, 1, matrix.values, 1, &result, 1, vDSP_Length(values.count))
+        return Matrix(values: result, shape: shape)
+    }
+    
+    /// Multiply `Matrix` and `Matrix` element wise
+    ///
+    /// - parameter matrix:     Other `Matrix`
+    ///
+    /// - returns:              `Matrix`
+    private func multiply(by matrix: Matrix) -> Matrix {
+        precondition(matrix.shape == shape)
+        var result = [Double](repeating : 0.0, count : values.count)
+        vDSP_vmulD(values, 1, matrix.values, 1, &result, 1, vDSP_Length(values.count))
+        return Matrix(values: result, shape: shape)
+    }
+    
+    /// Divide `Matrix` by `Matrix` element wise
+    ///
+    /// - parameter matrix:     Other `Matrix`
+    ///
+    /// - returns:              `Matrix`
+    private func divide(by matrix: Matrix) -> Matrix {
+        precondition(matrix.shape == shape)
+        var result = [Double](repeating : 0.0, count : values.count)
+        vDSP_vdivD(matrix.values, 1, values, 1, &result, 1, vDSP_Length(values.count))
+        return Matrix(values: result, shape: shape)
+    }
+}
+
+extension Matrix: Equatable {
+    
+    public static func ==(lhs: Matrix, rhs: Matrix) -> Bool {
+        return lhs.values == rhs.values && lhs.shape == rhs.shape
     }
 }

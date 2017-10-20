@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// Type describing 2-dimensional `Matrix` shape
-public struct Shape: Equatable {
+/// Type describing 2-dimensional `Matrix`s shape
+public struct Shape {
     
     /// Transpose operation
     public var T: Shape {
